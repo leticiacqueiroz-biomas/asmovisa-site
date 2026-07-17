@@ -92,6 +92,39 @@
     padding:1.7rem 1.9rem;font-size:1.3rem;font-style:italic;line-height:1.4;box-shadow:var(--sombra)}
   .quote-block blockquote span{display:block;font-size:.82rem;font-style:normal;opacity:.85;margin-top:.7rem}
 
+  /* botões */
+  .btn{display:inline-block;padding:.8rem 1.8rem;border-radius:999px;text-decoration:none;
+    font-weight:600;font-size:.98rem;transition:.2s;border:0;cursor:pointer}
+  .btn-primary{background:var(--verde);color:#fff}
+  .btn-primary:hover{background:var(--verde-escuro);transform:translateY(-2px)}
+  .btn-light{background:#fff;color:var(--verde-escuro)}
+  .btn-light:hover{transform:translateY(-2px)}
+
+  /* faixa CTA */
+  .cta-band{background:var(--terra);color:#fff;text-align:center;padding:2.4rem 1.2rem}
+  .cta-band h2{font-size:1.5rem;margin-bottom:.3rem}
+  .cta-band p{opacity:.96;margin-bottom:1.2rem}
+
+  /* transparência */
+  .tint{background:var(--verde-claro)}
+  .transp-lead{max-width:770px;margin:0 auto 2rem;text-align:center;color:var(--cinza)}
+
+  /* participe cta */
+  .participe-cta{text-align:center;margin-top:2.2rem;background:#fff;border-radius:var(--raio);
+    box-shadow:var(--sombra);padding:1.8rem 1.5rem}
+  .participe-cta h3{color:var(--verde-escuro);margin-bottom:.3rem;font-size:1.2rem}
+  .participe-cta p{color:var(--cinza);margin-bottom:1.1rem}
+
+  /* faq */
+  .faq{max-width:820px;margin:0 auto}
+  .faq details{background:#fff;border-radius:var(--raio);box-shadow:var(--sombra);margin-bottom:.9rem;overflow:hidden}
+  .faq summary{cursor:pointer;padding:1.1rem 1.3rem;font-weight:600;color:var(--verde-escuro);
+    list-style:none;display:flex;justify-content:space-between;align-items:center;gap:1rem}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:"+";font-size:1.5rem;color:var(--terra);line-height:1}
+  .faq details[open] summary::after{content:"–"}
+  .faq details p{padding:0 1.3rem 1.2rem;color:var(--cinza)}
+
   /* sede */
   .sede{background:var(--verde-claro)}
   .sede-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:2.4rem;align-items:center}
@@ -153,11 +186,13 @@
     <button class="menu-btn" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
     <nav>
       <ul id="menu">
-        <li><a href="#historico">Histórico da ASMOVISA</a></li>
+        <li><a href="#historico">Histórico</a></li>
         <li><a href="#documentos">Documentos</a></li>
+        <li><a href="#transparencia">Transparência</a></li>
         <li><a href="#participe">Participe</a></li>
-        <li><a href="#canais">Canais de comunicação</a></li>
-        <li><a href="#diretoria">Diretoria ASMOVISA</a></li>
+        <li><a href="#faq">Perguntas</a></li>
+        <li><a href="#canais">Canais</a></li>
+        <li><a href="#diretoria">Diretoria</a></li>
       </ul>
     </nav>
   </div>
@@ -168,6 +203,13 @@
   <img class="logo" src="logo.jpg" alt="Logo ASMOVISA">
   <h1>Associação de Moradores do Sargi e Pé de Serra</h1>
   <p>Moradores unidos para representar, organizar e cuidar das nossas comunidades.</p>
+</section>
+
+<!-- CTA -->
+<section class="cta-band">
+  <h2>Faça parte da ASMOVISA</h2>
+  <p>Quanto mais moradores participando, mais forte fica a nossa comunidade.</p>
+  <a href="#participe" class="btn btn-light">Quero participar</a>
 </section>
 
 <!-- HISTÓRICO -->
@@ -232,8 +274,25 @@
   </div>
 </section>
 
+<!-- TRANSPARÊNCIA -->
+<section id="transparencia" class="tint">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Transparência</h2>
+      <div class="line"></div>
+      <p>A confiança da comunidade se constrói com informação clara e acessível.</p>
+    </div>
+    <p class="transp-lead">A ASMOVISA tem o compromisso de manter a prestação de contas aberta a todos os associados: de onde vêm e para onde vão os recursos da associação, com relatórios simples e comparáveis por período. Os balanços serão publicados aqui e apresentados nas assembleias.</p>
+    <div class="doc-grid">
+      <div class="doc"><div class="ico">📥</div><div><h3>Receitas</h3><p>Contribuições, doações e outras entradas da associação. <em>(em breve)</em></p></div></div>
+      <div class="doc"><div class="ico">📤</div><div><h3>Despesas</h3><p>Para onde os recursos são destinados. <em>(em breve)</em></p></div></div>
+      <div class="doc"><div class="ico">📊</div><div><h3>Relatórios por período</h3><p>Balanços e comparativos apresentados nas assembleias. <em>(em breve)</em></p></div></div>
+    </div>
+  </div>
+</section>
+
 <!-- PARTICIPE -->
-<section id="participe" class="participe">
+<section id="participe">
   <div class="wrap">
     <div class="section-head">
       <h2>Participe</h2>
@@ -250,8 +309,47 @@
         <p>As reuniões são abertas e divulgadas com antecedência a todos. É nelas que as prioridades e decisões da comunidade são definidas — a sua voz conta.</p>
       </div>
     </div>
-    <div class="nota" style="text-align:center">
-      Quer se associar ou tirar uma dúvida? Fale com a gente pelos <a href="#canais">canais de comunicação</a>.
+    <div class="participe-cta">
+      <h3>Tem uma demanda do bairro?</h3>
+      <p>Iluminação, coleta de lixo, saneamento, buracos na rua... registre e a associação leva ao poder público.</p>
+      <a class="btn btn-primary" href="mailto:asmovisasg@gmail.com?subject=Demanda%20do%20bairro%20%E2%80%93%20Sargi%2FP%C3%A9%20de%20Serra&body=Local%3A%20%0ADescri%C3%A7%C3%A3o%20da%20demanda%2Fproblema%3A%20%0A%0ASeu%20nome%20e%20contato%3A%20">Registre uma demanda</a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="tint">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Perguntas Frequentes</h2>
+      <div class="line"></div>
+      <p>Dúvidas comuns sobre a associação e como participar.</p>
+    </div>
+    <div class="faq">
+      <details>
+        <summary>Quem pode se associar?</summary>
+        <p>Qualquer morador ou proprietário do Sargi e do Pé de Serra pode se associar e participar das assembleias da ASMOVISA.</p>
+      </details>
+      <details>
+        <summary>Como faço para participar?</summary>
+        <p>Participe das assembleias — que são abertas e divulgadas com antecedência a todos — e fale com a associação pelos canais de comunicação. Sua presença e sua voz nas decisões fazem a diferença.</p>
+      </details>
+      <details>
+        <summary>Como levo uma demanda ou problema do bairro?</summary>
+        <p>Use o botão “Registre uma demanda”, na seção Participe, que abre um e-mail pronto para a associação. Você também pode falar pelos canais de comunicação. A ASMOVISA leva as questões mais urgentes ao poder público.</p>
+      </details>
+      <details>
+        <summary>Para onde vai o dinheiro da associação?</summary>
+        <p>Os recursos são usados em benefício da comunidade e prestados de contas a todos os associados. Você pode acompanhar na seção Transparência e nas assembleias.</p>
+      </details>
+      <details>
+        <summary>A ASMOVISA cobra mensalidade?</summary>
+        <p>As formas de contribuição e apoio à associação são definidas em assembleia. Fale com a ASMOVISA pelos canais de comunicação para saber como colaborar.</p>
+      </details>
+      <details>
+        <summary>Como são tomadas as decisões?</summary>
+        <p>Sempre em conjunto, nas assembleias, de forma transparente e com condições iguais para todos os associados.</p>
+      </details>
     </div>
   </div>
 </section>
