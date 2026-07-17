@@ -3,493 +3,76 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ASMOVISA — Associação de Moradores do Sargi e Pé de Serra</title>
-<meta name="description" content="ASMOVISA — Associação de Moradores do Sargi e Pé de Serra. Histórico, documentos, participação e canais de comunicação da associação.">
-
-<!-- Preview para WhatsApp / redes sociais (Open Graph) -->
+<title>ASMOVISA — Sargi e Pé de Serra</title>
+<meta name="description" content="Associação de Moradores do Sargi e Pé de Serra. Histórico, documentos, transparência, portal do proprietário e participação da comunidade.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="ASMOVISA">
-<meta property="og:title" content="ASMOVISA — Associação de Moradores do Sargi e Pé de Serra">
-<meta property="og:description" content="Moradores unidos para representar, organizar e cuidar das comunidades do Sargi e do Pé de Serra. Conheça o histórico, os documentos, como participar e os canais de comunicação da associação.">
+<meta property="og:title" content="ASMOVISA — Sargi e Pé de Serra">
+<meta property="og:description" content="Associação de Moradores do Sargi e Pé de Serra. Histórico, documentos, transparência, portal do proprietário e participação da comunidade.">
 <meta property="og:url" content="https://asmovisa.org.br/">
 <meta property="og:image" content="https://asmovisa.org.br/hero.jpg">
-<meta property="og:image:width" content="1212">
-<meta property="og:image:height" content="909">
 <meta property="og:locale" content="pt_BR">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="ASMOVISA — Sargi e Pé de Serra">
-<meta name="twitter:description" content="Associação de Moradores do Sargi e do Pé de Serra — histórico, documentos, participação e canais de comunicação.">
 <meta name="twitter:image" content="https://asmovisa.org.br/hero.jpg">
-
-<style>
-  :root{
-    --verde:#2e7d32;
-    --verde-escuro:#1b5e20;
-    --verde-claro:#e8f3e6;
-    --terra:#b9622f;
-    --terra-claro:#f3e7dd;
-    --areia:#fbf8f3;
-    --texto:#2b2b2b;
-    --cinza:#5c5c5c;
-    --branco:#ffffff;
-    --sombra:0 6px 22px rgba(0,0,0,.08);
-    --raio:16px;
-  }
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{
-    font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
-    color:var(--texto);background:var(--areia);line-height:1.65;
-  }
-  img{max-width:100%;display:block}
-  a{color:var(--verde-escuro)}
-
-  /* NAV */
-  header.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);
-    backdrop-filter:blur(6px);border-bottom:1px solid #ece6dc}
-  .nav-inner{max-width:1150px;margin:0 auto;padding:.6rem 1.2rem;
-    display:flex;align-items:center;gap:.8rem;justify-content:space-between}
-  .brand{display:flex;align-items:center;gap:.7rem;text-decoration:none;color:var(--verde-escuro)}
-  .brand img{width:46px;height:46px;border-radius:50%}
-  .brand b{font-size:1.15rem;letter-spacing:.5px}
-  .brand span{display:block;font-size:.72rem;color:var(--cinza);font-weight:400}
-  nav ul{list-style:none;display:flex;gap:1.15rem}
-  nav a{text-decoration:none;color:var(--texto);font-weight:500;font-size:.93rem}
-  nav a:hover{color:var(--verde)}
-  .menu-btn{display:none;background:none;border:0;font-size:1.6rem;cursor:pointer;color:var(--verde-escuro)}
-
-  /* HERO */
-  .hero{
-    background:linear-gradient(rgba(27,94,32,.62),rgba(20,70,24,.80)), url("hero.jpg") center 40%/cover no-repeat;
-    color:#fff;text-align:center;padding:6rem 1.2rem 5.5rem;
-  }
-  .hero img.logo{width:120px;height:120px;border-radius:50%;margin:0 auto 1.3rem;
-    background:#fff;padding:6px;box-shadow:var(--sombra)}
-  .hero h1{font-size:2.2rem;line-height:1.2;margin-bottom:.6rem}
-  .hero p{max-width:660px;margin:0 auto;font-size:1.12rem;opacity:.96}
-
-  /* SECTION */
-  section{padding:4rem 1.2rem}
-  .wrap{max-width:1080px;margin:0 auto}
-  .section-head{text-align:center;max-width:740px;margin:0 auto 2.6rem}
-  .section-head h2{font-size:1.8rem;color:var(--verde-escuro);margin-bottom:.5rem}
-  .section-head .line{width:64px;height:4px;background:var(--terra);border-radius:4px;margin:.7rem auto 1rem}
-  .section-head p{color:var(--cinza)}
-
-  /* cards genéricos */
-  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:2.4rem;align-items:start}
-  .card{background:#fff;border-radius:var(--raio);padding:1.6rem 1.7rem;box-shadow:var(--sombra)}
-  .card h3{color:var(--verde-escuro);margin-bottom:.4rem;font-size:1.15rem}
-  .card p{color:var(--cinza)}
-  .pill-list{list-style:none;margin-top:.6rem}
-  .pill-list li{padding:.35rem 0 .35rem 1.6rem;position:relative;color:var(--cinza)}
-  .pill-list li::before{content:"✔";position:absolute;left:0;color:var(--verde)}
-  .nota{background:#fff7ed;border:1px dashed var(--terra);color:#8a4b22;
-    border-radius:var(--raio);padding:1rem 1.2rem;margin-top:2rem;font-size:.92rem}
-  .quote-block{max-width:820px;margin:2.6rem auto 0;text-align:center}
-  .quote-block>p{color:var(--cinza);margin-bottom:1.3rem}
-  .quote-block blockquote{background:var(--verde-escuro);color:#fff;border-radius:var(--raio);
-    padding:1.7rem 1.9rem;font-size:1.3rem;font-style:italic;line-height:1.4;box-shadow:var(--sombra)}
-  .quote-block blockquote span{display:block;font-size:.82rem;font-style:normal;opacity:.85;margin-top:.7rem}
-
-  /* botões */
-  .btn{display:inline-block;padding:.8rem 1.8rem;border-radius:999px;text-decoration:none;
-    font-weight:600;font-size:.98rem;transition:.2s;border:0;cursor:pointer}
-  .btn-primary{background:var(--verde);color:#fff}
-  .btn-primary:hover{background:var(--verde-escuro);transform:translateY(-2px)}
-  .btn-light{background:#fff;color:var(--verde-escuro)}
-  .btn-light:hover{transform:translateY(-2px)}
-
-  /* faixa CTA */
-  .cta-band{background:var(--terra);color:#fff;text-align:center;padding:2.4rem 1.2rem}
-  .cta-band h2{font-size:1.5rem;margin-bottom:.3rem}
-  .cta-band p{opacity:.96;margin-bottom:1.2rem}
-
-  /* transparência */
-  .tint{background:var(--verde-claro)}
-  .transp-lead{max-width:770px;margin:0 auto 2rem;text-align:center;color:var(--cinza)}
-
-  /* participe cta */
-  .participe-cta{text-align:center;margin-top:2.2rem;background:#fff;border-radius:var(--raio);
-    box-shadow:var(--sombra);padding:1.8rem 1.5rem}
-  .participe-cta h3{color:var(--verde-escuro);margin-bottom:.3rem;font-size:1.2rem}
-  .participe-cta p{color:var(--cinza);margin-bottom:1.1rem}
-
-  /* faq */
-  .faq{max-width:820px;margin:0 auto}
-  .faq details{background:#fff;border-radius:var(--raio);box-shadow:var(--sombra);margin-bottom:.9rem;overflow:hidden}
-  .faq summary{cursor:pointer;padding:1.1rem 1.3rem;font-weight:600;color:var(--verde-escuro);
-    list-style:none;display:flex;justify-content:space-between;align-items:center;gap:1rem}
-  .faq summary::-webkit-details-marker{display:none}
-  .faq summary::after{content:"+";font-size:1.5rem;color:var(--terra);line-height:1}
-  .faq details[open] summary::after{content:"–"}
-  .faq details p{padding:0 1.3rem 1.2rem;color:var(--cinza)}
-
-  /* O Sargi */
-  .lugar-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:2.2rem}
-  .lugar-grid figure{position:relative;border-radius:var(--raio);overflow:hidden;
-    box-shadow:var(--sombra);aspect-ratio:4/3;margin:0}
-  .lugar-grid img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
-  .lugar-grid figure:hover img{transform:scale(1.06)}
-  .lugar-grid figcaption{position:absolute;left:0;right:0;bottom:0;color:#fff;font-size:.82rem;
-    font-weight:600;padding:1.6rem .85rem .65rem;background:linear-gradient(transparent,rgba(0,0,0,.7))}
-  @media(max-width:700px){.lugar-grid{grid-template-columns:repeat(2,1fr)}}
-
-  /* Portal do Proprietário */
-  .portal{background:linear-gradient(135deg,var(--verde-escuro),#0f3d14);color:#fff}
-  .portal .section-head h2{color:#fff}
-  .portal .section-head p{color:#cfe6cb}
-  .portal-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:1.2rem;margin-bottom:2.2rem}
-  .portal-item{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);
-    border-radius:var(--raio);padding:1.3rem 1.4rem}
-  .portal-item .ico{font-size:1.7rem}
-  .portal-item h3{margin:.4rem 0 .25rem;font-size:1.05rem;color:#fff}
-  .portal-item p{font-size:.9rem;color:#cfe6cb}
-  .portal-cta{text-align:center}
-  .portal-badge{display:inline-block;background:rgba(255,255,255,.16);border-radius:999px;
-    padding:.32rem .95rem;font-size:.78rem;margin-bottom:1rem;color:#eaf6e8;letter-spacing:.3px}
-  .portal-cta p{color:#cfe6cb;margin-bottom:1.1rem}
-
-  /* sede */
-  .sede{background:var(--verde-claro)}
-  .sede-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:2.4rem;align-items:center}
-  .sede-grid img{border-radius:var(--raio);box-shadow:var(--sombra);width:100%;object-fit:cover}
-
-  /* documentos */
-  .doc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.3rem}
-  .doc{background:#fff;border-radius:var(--raio);padding:1.4rem 1.5rem;box-shadow:var(--sombra);
-    display:flex;gap:.9rem;align-items:flex-start}
-  .doc .ico{font-size:1.7rem;line-height:1}
-  .doc h3{font-size:1.05rem;color:var(--verde-escuro);margin-bottom:.2rem}
-  .doc p{font-size:.88rem;color:var(--cinza)}
-  a.doc{color:var(--texto);text-decoration:none;transition:.2s}
-  a.doc:hover{transform:translateY(-3px)}
-  .baixar{display:inline-block;margin-top:.5rem;color:var(--terra);font-weight:700;font-size:.8rem;letter-spacing:.3px}
-
-  /* propostas */
-  .bloco-titulo{text-align:center;color:var(--verde-escuro);font-size:1.25rem;margin:2.6rem 0 1.4rem}
-  .propostas{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.4rem}
-  .proposta{background:#fff;border-radius:var(--raio);box-shadow:var(--sombra);padding:1.5rem}
-  .proposta .num{width:38px;height:38px;border-radius:50%;background:var(--verde);color:#fff;
-    font-weight:700;display:flex;align-items:center;justify-content:center;margin-bottom:.8rem;font-size:1.05rem}
-  .proposta p{color:var(--cinza);font-size:.95rem}
-  .arte-chapa{max-width:620px;margin:1.4rem auto 0}
-  .arte-chapa img{width:100%;border-radius:var(--raio);box-shadow:var(--sombra)}
-
-  /* participe / canais */
-  .participe{background:var(--verde-claro)}
-  .canal-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.6rem;max-width:760px;margin:0 auto}
-  .canal{background:#fff;border-radius:var(--raio);box-shadow:var(--sombra);padding:1.8rem;
-    text-align:center;text-decoration:none;display:block;transition:.2s;color:var(--texto)}
-  .canal:hover{transform:translateY(-4px)}
-  .canal .ico{font-size:2.3rem}
-  .canal h3{color:var(--verde-escuro);margin:.5rem 0 .2rem}
-  .canal p{color:var(--cinza);font-size:.95rem;word-break:break-word}
-
-  /* footer */
-  footer{background:var(--verde-escuro);color:#dfeede;text-align:center;padding:2.4rem 1.2rem}
-  footer img{width:54px;height:54px;border-radius:50%;margin:0 auto .8rem;background:#fff;padding:4px}
-  footer a{color:#fff}
-  footer .small{font-size:.82rem;opacity:.8;margin-top:.8rem}
-
-  @media(max-width:860px){
-    .grid2,.sede-grid,.canal-grid{grid-template-columns:1fr}
-    nav ul{display:none;position:absolute;top:64px;right:12px;background:#fff;flex-direction:column;
-      padding:1rem 1.4rem;border-radius:12px;box-shadow:var(--sombra);gap:.8rem}
-    nav ul.open{display:flex}
-    .menu-btn{display:block}
-    .hero h1{font-size:1.7rem}
-  }
-</style>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<!-- NAV -->
 <header class="nav">
   <div class="nav-inner">
-    <a href="#topo" class="brand">
+    <a href="index.html" class="brand">
       <img src="logo.jpg" alt="Logo ASMOVISA">
       <span><b>ASMOVISA</b>Sargi e Pé de Serra</span>
     </a>
-    <button class="menu-btn" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
+    <button class="menu-btn" aria-label="Abrir menu" onclick="document.getElementById('menu').classList.toggle('open')">&#9776;</button>
     <nav>
       <ul id="menu">
-        <li><a href="#lugar">O Sargi</a></li>
-        <li><a href="#historico">Histórico</a></li>
-        <li><a href="#documentos">Documentos</a></li>
-        <li><a href="#transparencia">Transparência</a></li>
-        <li><a href="#portal">Portal</a></li>
-        <li><a href="#participe">Participe</a></li>
-        <li><a href="#diretoria">Diretoria</a></li>
+        <li><a href="sargi.html">O Sargi</a></li>
+        <li><a href="historico.html">Histórico</a></li>
+        <li><a href="documentos.html">Documentos</a></li>
+        <li><a href="transparencia.html">Transparência</a></li>
+        <li><a href="portal.html">Portal</a></li>
+        <li><a href="participe.html">Participe</a></li>
+        <li><a href="diretoria.html">Diretoria</a></li>
       </ul>
     </nav>
   </div>
 </header>
-
-<!-- HERO -->
 <section class="hero" id="topo">
   <img class="logo" src="logo.jpg" alt="Logo ASMOVISA">
   <h1>Associação de Moradores do Sargi e Pé de Serra</h1>
   <p>Moradores unidos para representar, organizar e cuidar das nossas comunidades.</p>
-</section>
-
-<!-- CTA -->
-<section class="cta-band">
+</section><section class="cta-band">
   <h2>Faça parte da ASMOVISA</h2>
   <p>Quanto mais moradores participando, mais forte fica a nossa comunidade.</p>
-  <a href="#participe" class="btn btn-light">Quero participar</a>
+  <a href="participe.html" class="btn btn-light">Quero participar</a>
 </section>
-
-<!-- O SARGI E PÉ DE SERRA -->
-<section id="lugar">
+<section>
   <div class="wrap">
     <div class="section-head">
-      <h2>O Sargi e o Pé de Serra</h2>
+      <h2>Explore o site</h2>
       <div class="line"></div>
-      <p>No litoral sul da Bahia, em Serra Grande (distrito de Uruçuca), o Sargi e o Pé de Serra reúnem praias extensas de areia clara, coqueirais e mata atlântica preservada.</p>
-    </div>
-    <div class="lugar-grid">
-      <figure><img src="g1.jpg" alt="Praia do Sargi vista da encosta"><figcaption>Praia do Sargi</figcaption></figure>
-      <figure><img src="g2.jpg" alt="Encontro do rio com o mar no Sargi"><figcaption>Encontro do rio com o mar</figcaption></figure>
-      <figure><img src="g5.jpg" alt="Foz do Rio Sargi vista de cima"><figcaption>Foz do Rio Sargi</figcaption></figure>
-      <figure><img src="g4.jpg" alt="Praia e mata do Pé de Serra"><figcaption>Praia e mata do Pé de Serra</figcaption></figure>
-      <figure><img src="g3.jpg" alt="Barraca de praia na Barra do Sargi"><figcaption>Barra do Sargi</figcaption></figure>
-      <figure><img src="g6.jpg" alt="Barra do Sargi, Serra Grande"><figcaption>Serra Grande, Bahia</figcaption></figure>
-    </div>
-    <div class="grid2">
-      <div class="card">
-        <h3>Praias e coqueirais</h3>
-        <p>Praias longas e abertas, de areia clara e ladeadas por coqueiros e pela mata atlântica, convidam a caminhadas e ao contato com a natureza — um cenário típico do litoral cacaueiro do sul da Bahia.</p>
-      </div>
-      <div class="card">
-        <h3>A Barra do Sargi</h3>
-        <p>É onde o Rio Sargi encontra o mar, formando uma barra de águas tranquilas entre a areia e o verde — um dos cartões-postais da região e ponto de encontro de moradores e visitantes.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- HISTÓRICO -->
-<section id="historico">
-  <div class="wrap">
-    <div class="section-head">
-      <h2>Histórico da ASMOVISA</h2>
-      <div class="line"></div>
-      <p>A Associação de Moradores do Sargi e Pé de Serra reúne moradores e proprietários das comunidades do Sargi e do Pé de Serra, em Serra Grande, distrito de Uruçuca, na Bahia.</p>
-    </div>
-    <div class="grid2">
-      <div class="card">
-        <h3>O que é uma associação de moradores</h3>
-        <p>É um grupo formado por representantes dos moradores, formalizado juridicamente em cartório, sem fins econômicos e que luta em prol do bem comum. Uma associação pode representar um bairro inteiro, uma parte dele ou até mesmo uma rua. Em geral, seus líderes são eleitos pelos membros da associação e levam as questões mais urgentes do bairro ao conhecimento do setor público.</p>
-      </div>
-      <div class="card">
-        <h3>O que a associação faz</h3>
-        <p>Busca, perante os órgãos públicos ou na própria comunidade, melhorias para todos os envolvidos no bairro ou na região. Atua na resolução de problemas estruturais do território — como iluminação pública, criação e manutenção de áreas de lazer, coleta de lixo e saneamento básico. Essas soluções são fundamentais para a qualidade de vida de toda a população que vive no entorno, inclusive as crianças.</p>
-      </div>
-    </div>
-    <div class="quote-block">
-      <p>Além de melhorar a estrutura do bairro, essas ações promovem a socialização entre os moradores, o que contribui para a construção de um sentimento de comunidade entre todos os envolvidos. Uma comunidade forte e unida pode colaborar muito nesse processo.</p>
-      <blockquote>“É preciso uma aldeia para criar uma criança.”<span>— ditado africano</span></blockquote>
-    </div>
-  </div>
-</section>
-
-<!-- NOSSA SEDE -->
-<section id="sede" class="sede">
-  <div class="wrap">
-    <div class="section-head">
-      <h2>Nossa Sede</h2>
-      <div class="line"></div>
-      <p>O espaço onde a comunidade se reúne, decide e se organiza.</p>
-    </div>
-    <div class="sede-grid">
-      <img src="sede.jpg" alt="Sede da ASMOVISA">
-      <div>
-        <h3 style="color:var(--verde-escuro);margin-bottom:.6rem">Ponto de encontro da comunidade</h3>
-        <p style="color:var(--cinza)">É na sede que acontecem as assembleias e reuniões abertas a todos os moradores. Todas as decisões da associação são tomadas em conjunto, de forma transparente e com condições iguais para todos.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- DOCUMENTOS -->
-<section id="documentos">
-  <div class="wrap">
-    <div class="section-head">
-      <h2>Documentos</h2>
-      <div class="line"></div>
-      <p>Acesso aberto aos documentos da associação e às informações de interesse da comunidade.</p>
+      <p>Navegue pelas áreas da associação.</p>
     </div>
     <div class="doc-grid">
-      <a class="doc" href="estatuto.pdf" target="_blank" rel="noopener"><div class="ico">📄</div><div><h3>Estatuto Social</h3><p>Documento que define as regras da associação (Abril/2012).</p><span class="baixar">Baixar PDF ↓</span></div></a>
-      <a class="doc" href="cartilha.pdf" target="_blank" rel="noopener"><div class="ico">📕</div><div><h3>Cartilha da ASMOVISA</h3><p>Guia da associação para os moradores do Sargi.</p><span class="baixar">Baixar PDF ↓</span></div></a>
-      <a class="doc" href="manual-de-convivencia.pdf" target="_blank" rel="noopener"><div class="ico">📘</div><div><h3>Manual de Convivência</h3><p>Cuidados e boas práticas de convivência no Sargi (jan/2024).</p><span class="baixar">Baixar PDF ↓</span></div></a>
-      <a class="doc" href="mapa-das-ruas.pdf" target="_blank" rel="noopener"><div class="ico">🗺️</div><div><h3>Mapa das Ruas</h3><p>Nomes e traçado das ruas do Sargi.</p><span class="baixar">Baixar PDF ↓</span></div></a>
-      <a class="doc" href="alagamentos-e-pavimentacao.pdf" target="_blank" rel="noopener"><div class="ico">🌧️</div><div><h3>Alagamentos e Pavimentação</h3><p>Resultado da escuta da comunidade sobre as obras no Sargi.</p><span class="baixar">Baixar PDF ↓</span></div></a>
-      <div class="doc"><div class="ico">📝</div><div><h3>Atas de Assembleia</h3><p>Registros das reuniões e decisões da associação. <em>(em breve)</em></p></div></div>
-      <div class="doc"><div class="ico">💰</div><div><h3>Prestação de Contas</h3><p>Como os recursos da associação são utilizados. <em>(em breve)</em></p></div></div>
+      <a class="doc" href="sargi.html"><div class="ico">🏖️</div><div><h3>O Sargi e o Pé de Serra</h3><p>As praias e a natureza da região.</p></div></a>
+      <a class="doc" href="historico.html"><div class="ico">🌱</div><div><h3>Histórico</h3><p>O que é e o que faz a associação.</p></div></a>
+      <a class="doc" href="documentos.html"><div class="ico">📄</div><div><h3>Documentos</h3><p>Estatuto, cartilha, manual e mapa.</p></div></a>
+      <a class="doc" href="transparencia.html"><div class="ico">📊</div><div><h3>Transparência</h3><p>Prestação de contas da associação.</p></div></a>
+      <a class="doc" href="portal.html"><div class="ico">🔑</div><div><h3>Portal do Proprietário</h3><p>Área exclusiva para associados.</p></div></a>
+      <a class="doc" href="participe.html"><div class="ico">🤝</div><div><h3>Participe</h3><p>Associe-se e registre demandas.</p></div></a>
+      <a class="doc" href="diretoria.html"><div class="ico">👥</div><div><h3>Diretoria</h3><p>Quem representa a associação.</p></div></a>
+      <a class="doc" href="canais.html"><div class="ico">✉️</div><div><h3>Canais</h3><p>E-mail e Instagram da ASMOVISA.</p></div></a>
     </div>
   </div>
 </section>
 
-<!-- TRANSPARÊNCIA -->
-<section id="transparencia" class="tint">
-  <div class="wrap">
-    <div class="section-head">
-      <h2>Transparência</h2>
-      <div class="line"></div>
-      <p>A confiança da comunidade se constrói com informação clara e acessível.</p>
-    </div>
-    <p class="transp-lead">A ASMOVISA tem o compromisso de manter a prestação de contas aberta a todos os associados: de onde vêm e para onde vão os recursos da associação, com relatórios simples e comparáveis por período. Os balanços serão publicados aqui e apresentados nas assembleias.</p>
-    <div class="doc-grid">
-      <div class="doc"><div class="ico">📥</div><div><h3>Receitas</h3><p>Contribuições, doações e outras entradas da associação. <em>(em breve)</em></p></div></div>
-      <div class="doc"><div class="ico">📤</div><div><h3>Despesas</h3><p>Para onde os recursos são destinados. <em>(em breve)</em></p></div></div>
-      <div class="doc"><div class="ico">📊</div><div><h3>Relatórios por período</h3><p>Balanços e comparativos apresentados nas assembleias. <em>(em breve)</em></p></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- PORTAL DO PROPRIETÁRIO -->
-<section id="portal" class="portal">
-  <div class="wrap">
-    <div class="section-head">
-      <h2>Portal do Proprietário</h2>
-      <div class="line"></div>
-      <p>Uma área exclusiva para os moradores e proprietários associados do Sargi e do Pé de Serra.</p>
-    </div>
-    <div class="portal-grid">
-      <div class="portal-item"><div class="ico">📄</div><h3>Documentos exclusivos</h3><p>Comunicados, atas e materiais reservados aos associados.</p></div>
-      <div class="portal-item"><div class="ico">🧾</div><h3>2ª via de contribuições</h3><p>Emissão de boletos e comprovantes de contribuição.</p></div>
-      <div class="portal-item"><div class="ico">📣</div><h3>Ouvidoria</h3><p>Canal direto para solicitações, sugestões e reclamações.</p></div>
-      <div class="portal-item"><div class="ico">👤</div><h3>Meu cadastro</h3><p>Atualize seus dados e mantenha seu contato sempre em dia.</p></div>
-    </div>
-    <div class="portal-cta">
-      <span class="portal-badge">Área em implantação</span>
-      <p>Em breve os proprietários cadastrados terão acesso. Quer ser avisado ou já iniciar seu cadastro?</p>
-      <a class="btn btn-light" href="mailto:asmovisasg@gmail.com?subject=Portal%20do%20Propriet%C3%A1rio%20%E2%80%93%20Acesso&body=Quero%20acesso%20ao%20Portal%20do%20Propriet%C3%A1rio.%0ANome%3A%20%0AEndere%C3%A7o%2FLote%20no%20Sargi%20ou%20P%C3%A9%20de%20Serra%3A%20%0AContato%3A%20">Solicitar acesso</a>
-    </div>
-  </div>
-</section>
-
-<!-- PARTICIPE -->
-<section id="participe">
-  <div class="wrap">
-    <div class="section-head">
-      <h2>Participe</h2>
-      <div class="line"></div>
-      <p>Toda decisão é tomada em conjunto. A sua participação faz a diferença.</p>
-    </div>
-    <div class="grid2">
-      <div class="card">
-        <h3>Associe-se</h3>
-        <p>Qualquer morador ou proprietário do Sargi e do Pé de Serra pode se associar e participar. Quanto mais gente engajada, mais forte fica a associação para representar a comunidade.</p>
-      </div>
-      <div class="card">
-        <h3>Vá às assembleias</h3>
-        <p>As reuniões são abertas e divulgadas com antecedência a todos. É nelas que as prioridades e decisões da comunidade são definidas — a sua voz conta.</p>
-      </div>
-    </div>
-    <div class="participe-cta">
-      <h3>Tem uma demanda do bairro?</h3>
-      <p>Iluminação, coleta de lixo, saneamento, buracos na rua... registre e a associação leva ao poder público.</p>
-      <a class="btn btn-primary" href="mailto:asmovisasg@gmail.com?subject=Demanda%20do%20bairro%20%E2%80%93%20Sargi%2FP%C3%A9%20de%20Serra&body=Local%3A%20%0ADescri%C3%A7%C3%A3o%20da%20demanda%2Fproblema%3A%20%0A%0ASeu%20nome%20e%20contato%3A%20">Registre uma demanda</a>
-    </div>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section id="faq" class="tint">
-  <div class="wrap">
-    <div class="section-head">
-      <h2>Perguntas Frequentes</h2>
-      <div class="line"></div>
-      <p>Dúvidas comuns sobre a associação e como participar.</p>
-    </div>
-    <div class="faq">
-      <details>
-        <summary>Quem pode se associar?</summary>
-        <p>Qualquer morador ou proprietário do Sargi e do Pé de Serra pode se associar e participar das assembleias da ASMOVISA.</p>
-      </details>
-      <details>
-        <summary>Como faço para participar?</summary>
-        <p>Participe das assembleias — que são abertas e divulgadas com antecedência a todos — e fale com a associação pelos canais de comunicação. Sua presença e sua voz nas decisões fazem a diferença.</p>
-      </details>
-      <details>
-        <summary>Como levo uma demanda ou problema do bairro?</summary>
-        <p>Use o botão “Registre uma demanda”, na seção Participe, que abre um e-mail pronto para a associação. Você também pode falar pelos canais de comunicação. A ASMOVISA leva as questões mais urgentes ao poder público.</p>
-      </details>
-      <details>
-        <summary>Para onde vai o dinheiro da associação?</summary>
-        <p>Os recursos são usados em benefício da comunidade e prestados de contas a todos os associados. Você pode acompanhar na seção Transparência e nas assembleias.</p>
-      </details>
-      <details>
-        <summary>A ASMOVISA cobra mensalidade?</summary>
-        <p>As formas de contribuição e apoio à associação são definidas em assembleia. Fale com a ASMOVISA pelos canais de comunicação para saber como colaborar.</p>
-      </details>
-      <details>
-        <summary>Como são tomadas as decisões?</summary>
-        <p>Sempre em conjunto, nas assembleias, de forma transparente e com condições iguais para todos os associados.</p>
-      </details>
-    </div>
-  </div>
-</section>
-
-<!-- CANAIS DE COMUNICAÇÃO -->
-<section id="canais">
-  <div class="wrap">
-    <div class="section-head">
-      <h2>Canais de comunicação</h2>
-      <div class="line"></div>
-      <p>Fale com a ASMOVISA e acompanhe as novidades da associação.</p>
-    </div>
-    <div class="canal-grid">
-      <a class="canal" href="mailto:asmovisasg@gmail.com">
-        <div class="ico">✉️</div>
-        <h3>E-mail</h3>
-        <p>asmovisasg@gmail.com</p>
-      </a>
-      <a class="canal" href="https://www.instagram.com/asmovisa_sg" target="_blank" rel="noopener">
-        <div class="ico">📷</div>
-        <h3>Instagram</h3>
-        <p>@asmovisa_sg</p>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- DIRETORIA -->
-<section id="diretoria" class="sede">
-  <div class="wrap">
-    <div class="section-head">
-      <h2>Diretoria da ASMOVISA</h2>
-      <div class="line"></div>
-      <p>Conheça as pessoas que representam e trabalham pela associação.</p>
-    </div>
-
-    <h3 class="bloco-titulo">Nossos compromissos</h3>
-    <div class="propostas">
-      <div class="proposta"><div class="num">1</div><p>Construir um quadro de associados — moradores e proprietários — e desenvolver uma comunicação mais eficiente e colaborativa entre todos.</p></div>
-      <div class="proposta"><div class="num">2</div><p>Levantar e buscar a regularização da situação jurídica da associação, da sede e outras pendências, fortalecendo a ASMOVISA institucional e legalmente.</p></div>
-      <div class="proposta"><div class="num">3</div><p>Construir um canal permanente de diálogo com o poder público, voltado para melhorias efetivas, duradouras e para todos.</p></div>
-    </div>
-
-    <h3 class="bloco-titulo">Diretoria</h3>
-    <div class="arte-chapa">
-      <img src="diretoria.jpg" alt="Diretoria da ASMOVISA: Eduardo Caetano Barbosa (Presidente), Ana Beatriz Goulart de Faria (Vice-presidente), Vladimir Petcov (1º Secretário), Marina Ribeiro Moreira (2ª Secretária), Leticia Cruvinel de Queiroz (1ª Tesoureira) e Kika Aidar (2ª Tesoureira)">
-    </div>
-
-    <h3 class="bloco-titulo">Conselho Fiscal</h3>
-    <div class="arte-chapa">
-      <img src="conselho.jpg" alt="Conselho Fiscal da ASMOVISA. Titulares: Celia Orlandi, Jamile Costa dos Santos e Sylvio de Souza Pereira Filho. Suplentes: Helena Lozano, Isabel Tica Lemos e Pierry Gibran Sá Nunes de Oliveira">
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
 <footer>
   <img src="logo.jpg" alt="Logo ASMOVISA">
   <div><b>ASMOVISA</b> — Associação de Moradores do Sargi e Pé de Serra</div>
   <p class="small">
+    <a href="faq.html">Perguntas frequentes</a> ·
+    <a href="canais.html">Canais</a> ·
     <a href="mailto:asmovisasg@gmail.com">asmovisasg@gmail.com</a> ·
     <a href="https://www.instagram.com/asmovisa_sg" target="_blank" rel="noopener">@asmovisa_sg</a>
   </p>
