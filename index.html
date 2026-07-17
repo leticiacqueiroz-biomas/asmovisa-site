@@ -125,6 +125,31 @@
   .faq details[open] summary::after{content:"–"}
   .faq details p{padding:0 1.3rem 1.2rem;color:var(--cinza)}
 
+  /* O Sargi */
+  .lugar-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:2.2rem}
+  .lugar-grid figure{position:relative;border-radius:var(--raio);overflow:hidden;
+    box-shadow:var(--sombra);aspect-ratio:4/3;margin:0}
+  .lugar-grid img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+  .lugar-grid figure:hover img{transform:scale(1.06)}
+  .lugar-grid figcaption{position:absolute;left:0;right:0;bottom:0;color:#fff;font-size:.82rem;
+    font-weight:600;padding:1.6rem .85rem .65rem;background:linear-gradient(transparent,rgba(0,0,0,.7))}
+  @media(max-width:700px){.lugar-grid{grid-template-columns:repeat(2,1fr)}}
+
+  /* Portal do Proprietário */
+  .portal{background:linear-gradient(135deg,var(--verde-escuro),#0f3d14);color:#fff}
+  .portal .section-head h2{color:#fff}
+  .portal .section-head p{color:#cfe6cb}
+  .portal-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:1.2rem;margin-bottom:2.2rem}
+  .portal-item{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);
+    border-radius:var(--raio);padding:1.3rem 1.4rem}
+  .portal-item .ico{font-size:1.7rem}
+  .portal-item h3{margin:.4rem 0 .25rem;font-size:1.05rem;color:#fff}
+  .portal-item p{font-size:.9rem;color:#cfe6cb}
+  .portal-cta{text-align:center}
+  .portal-badge{display:inline-block;background:rgba(255,255,255,.16);border-radius:999px;
+    padding:.32rem .95rem;font-size:.78rem;margin-bottom:1rem;color:#eaf6e8;letter-spacing:.3px}
+  .portal-cta p{color:#cfe6cb;margin-bottom:1.1rem}
+
   /* sede */
   .sede{background:var(--verde-claro)}
   .sede-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:2.4rem;align-items:center}
@@ -189,12 +214,12 @@
     <button class="menu-btn" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
     <nav>
       <ul id="menu">
+        <li><a href="#lugar">O Sargi</a></li>
         <li><a href="#historico">Histórico</a></li>
         <li><a href="#documentos">Documentos</a></li>
         <li><a href="#transparencia">Transparência</a></li>
+        <li><a href="#portal">Portal</a></li>
         <li><a href="#participe">Participe</a></li>
-        <li><a href="#faq">Perguntas</a></li>
-        <li><a href="#canais">Canais</a></li>
         <li><a href="#diretoria">Diretoria</a></li>
       </ul>
     </nav>
@@ -213,6 +238,35 @@
   <h2>Faça parte da ASMOVISA</h2>
   <p>Quanto mais moradores participando, mais forte fica a nossa comunidade.</p>
   <a href="#participe" class="btn btn-light">Quero participar</a>
+</section>
+
+<!-- O SARGI E PÉ DE SERRA -->
+<section id="lugar">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>O Sargi e o Pé de Serra</h2>
+      <div class="line"></div>
+      <p>No litoral sul da Bahia, em Serra Grande (distrito de Uruçuca), o Sargi e o Pé de Serra reúnem praias extensas de areia clara, coqueirais e mata atlântica preservada.</p>
+    </div>
+    <div class="lugar-grid">
+      <figure><img src="g1.jpg" alt="Praia do Sargi vista da encosta"><figcaption>Praia do Sargi</figcaption></figure>
+      <figure><img src="g2.jpg" alt="Encontro do rio com o mar no Sargi"><figcaption>Encontro do rio com o mar</figcaption></figure>
+      <figure><img src="g5.jpg" alt="Foz do Rio Sargi vista de cima"><figcaption>Foz do Rio Sargi</figcaption></figure>
+      <figure><img src="g4.jpg" alt="Praia e mata do Pé de Serra"><figcaption>Praia e mata do Pé de Serra</figcaption></figure>
+      <figure><img src="g3.jpg" alt="Barraca de praia na Barra do Sargi"><figcaption>Barra do Sargi</figcaption></figure>
+      <figure><img src="g6.jpg" alt="Barra do Sargi, Serra Grande"><figcaption>Serra Grande, Bahia</figcaption></figure>
+    </div>
+    <div class="grid2">
+      <div class="card">
+        <h3>Praias e coqueirais</h3>
+        <p>Praias longas e abertas, de areia clara e ladeadas por coqueiros e pela mata atlântica, convidam a caminhadas e ao contato com a natureza — um cenário típico do litoral cacaueiro do sul da Bahia.</p>
+      </div>
+      <div class="card">
+        <h3>A Barra do Sargi</h3>
+        <p>É onde o Rio Sargi encontra o mar, formando uma barra de águas tranquilas entre a areia e o verde — um dos cartões-postais da região e ponto de encontro de moradores e visitantes.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- HISTÓRICO -->
@@ -291,6 +345,28 @@
       <div class="doc"><div class="ico">📥</div><div><h3>Receitas</h3><p>Contribuições, doações e outras entradas da associação. <em>(em breve)</em></p></div></div>
       <div class="doc"><div class="ico">📤</div><div><h3>Despesas</h3><p>Para onde os recursos são destinados. <em>(em breve)</em></p></div></div>
       <div class="doc"><div class="ico">📊</div><div><h3>Relatórios por período</h3><p>Balanços e comparativos apresentados nas assembleias. <em>(em breve)</em></p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTAL DO PROPRIETÁRIO -->
+<section id="portal" class="portal">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Portal do Proprietário</h2>
+      <div class="line"></div>
+      <p>Uma área exclusiva para os moradores e proprietários associados do Sargi e do Pé de Serra.</p>
+    </div>
+    <div class="portal-grid">
+      <div class="portal-item"><div class="ico">📄</div><h3>Documentos exclusivos</h3><p>Comunicados, atas e materiais reservados aos associados.</p></div>
+      <div class="portal-item"><div class="ico">🧾</div><h3>2ª via de contribuições</h3><p>Emissão de boletos e comprovantes de contribuição.</p></div>
+      <div class="portal-item"><div class="ico">📣</div><h3>Ouvidoria</h3><p>Canal direto para solicitações, sugestões e reclamações.</p></div>
+      <div class="portal-item"><div class="ico">👤</div><h3>Meu cadastro</h3><p>Atualize seus dados e mantenha seu contato sempre em dia.</p></div>
+    </div>
+    <div class="portal-cta">
+      <span class="portal-badge">Área em implantação</span>
+      <p>Em breve os proprietários cadastrados terão acesso. Quer ser avisado ou já iniciar seu cadastro?</p>
+      <a class="btn btn-light" href="mailto:asmovisasg@gmail.com?subject=Portal%20do%20Propriet%C3%A1rio%20%E2%80%93%20Acesso&body=Quero%20acesso%20ao%20Portal%20do%20Propriet%C3%A1rio.%0ANome%3A%20%0AEndere%C3%A7o%2FLote%20no%20Sargi%20ou%20P%C3%A9%20de%20Serra%3A%20%0AContato%3A%20">Solicitar acesso</a>
     </div>
   </div>
 </section>
