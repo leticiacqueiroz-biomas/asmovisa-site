@@ -52,8 +52,8 @@
 
   /* ---------- HERO ---------- */
   .hero{
-    background:linear-gradient(135deg,var(--verde) 0%,var(--verde-escuro) 100%);
-    color:#fff;text-align:center;padding:4.5rem 1.2rem 4rem;
+    background:linear-gradient(rgba(27,94,32,.66),rgba(20,70,24,.82)), url("hero.jpg") center 40%/cover no-repeat;
+    color:#fff;text-align:center;padding:5.5rem 1.2rem 5rem;
   }
   .hero img.logo{width:120px;height:120px;border-radius:50%;margin:0 auto 1.3rem;
     background:#fff;padding:6px;box-shadow:var(--sombra)}
@@ -136,6 +136,13 @@
   .eleicao b{color:#fff}
   .arte-chapa{max-width:620px;margin:0 auto 1rem}
   .arte-chapa img{width:100%;border-radius:var(--raio);box-shadow:var(--sombra)}
+  .galeria{background:var(--verde-claro)}
+  .galeria-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+  .galeria-grid a{display:block;overflow:hidden;border-radius:var(--raio);box-shadow:var(--sombra);
+    aspect-ratio:4/3}
+  .galeria-grid img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+  .galeria-grid a:hover img{transform:scale(1.06)}
+  @media(max-width:700px){.galeria-grid{grid-template-columns:repeat(2,1fr)}}
 
   /* transparência */
   .transp{background:var(--terra-claro)}
@@ -185,6 +192,7 @@
       <ul id="menu">
         <li><a href="#sobre">A Associação</a></li>
         <li><a href="#sede">Nossa Sede</a></li>
+        <li><a href="#galeria">Nosso Lugar</a></li>
         <li><a href="#chapa">Chapa Atual</a></li>
         <li><a href="#transparencia">Transparência</a></li>
         <li><a href="#contato">Contato</a></li>
@@ -247,6 +255,25 @@
         <p style="color:var(--cinza)">É na sede que acontecem as assembleias e reuniões abertas a todos os moradores. Todas as decisões da associação são tomadas em conjunto, de forma transparente e com condições iguais para todos.</p>
         <p style="color:var(--cinza);margin-top:.8rem">Quer participar da próxima reunião? <a href="#contato">Fale com a gente</a>.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALERIA -->
+<section id="galeria" class="galeria">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Nosso Lugar</h2>
+      <div class="line"></div>
+      <p>As praias, o rio e a natureza do Sargi e do Pé de Serra — o bem comum que a associação existe para cuidar.</p>
+    </div>
+    <div class="galeria-grid">
+      <a href="g1.jpg" target="_blank" rel="noopener"><img src="g1.jpg" alt="Praia do Sargi vista da encosta"></a>
+      <a href="g2.jpg" target="_blank" rel="noopener"><img src="g2.jpg" alt="Encontro do rio com o mar no Sargi"></a>
+      <a href="g3.jpg" target="_blank" rel="noopener"><img src="g3.jpg" alt="Praia com coqueiros na Barra do Sargi"></a>
+      <a href="g4.jpg" target="_blank" rel="noopener"><img src="g4.jpg" alt="Vista aérea da praia e da mata do Pé de Serra"></a>
+      <a href="g5.jpg" target="_blank" rel="noopener"><img src="g5.jpg" alt="Foz do rio Sargi vista de cima"></a>
+      <a href="g6.jpg" target="_blank" rel="noopener"><img src="g6.jpg" alt="Barra do Sargi, Serra Grande"></a>
     </div>
   </div>
 </section>
