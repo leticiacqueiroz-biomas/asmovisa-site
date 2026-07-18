@@ -8,7 +8,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="ASMOVISA">
 <meta property="og:title" content="ASMOVISA — Sargi e Pé de Serra">
-<meta property="og:description" content="Associação de Moradores do Sargi e Pé de Serra. Histórico, documentos, transparência, portal do proprietário e participação da comunidade.">
+<meta property="og:description" content="Moradores unidos para cuidar do nosso bairro. Associação de Moradores do Sargi e Pé de Serra.">
 <meta property="og:url" content="https://asmovisa.org.br/">
 <meta property="og:image" content="https://asmovisa.org.br/og.jpg">
 <meta property="og:image:width" content="1200">
@@ -24,9 +24,9 @@
   <div class="nav-inner">
     <a href="index.html" class="brand">
       <img src="logo.jpg" alt="Logo ASMOVISA">
-      <span><b>ASMOVISA</b>Sargi e Pé de Serra</span>
+      <span class="brand-txt">Associação de Moradores do Sargi e Pé de Serra</span>
     </a>
-    <button class="menu-btn" aria-label="Abrir menu" onclick="document.getElementById('menu').classList.toggle('open')">&#9776;</button>
+    <button class="menu-btn" aria-label="Abrir menu" onclick="document.getElementById('menu').classList.toggle('open')">&#9776; Menu</button>
     <nav>
       <ul id="menu">
         <li><a href="sargi.html">O Sargi</a></li>
@@ -40,15 +40,40 @@
     </nav>
   </div>
 </header>
-<section class="hero" id="topo">
-  <img class="logo" src="logo.jpg" alt="Logo ASMOVISA">
-  <h1>Associação de Moradores do Sargi e Pé de Serra</h1>
-  <p>Moradores unidos para cuidar do nosso bairro.</p>
-</section><section class="cta-band">
-  <h2>Faça parte da ASMOVISA</h2>
-  <p>Quanto mais moradores participando, mais forte fica a nossa comunidade.</p>
-  <a href="cadastro.html" class="btn btn-light">Quero participar</a>
-</section>
+
+<!-- CARROSSEL -->
+<div class="carousel" id="carousel">
+  <div class="slides" id="slides">
+
+    <div class="slide" style="background-image:url('hero.jpg')">
+      <div class="slide-content">
+        <h2>Moradores unidos para cuidar do nosso bairro</h2>
+        <p>A Associação de Moradores do Sargi e Pé de Serra representa, organiza e cuida das nossas comunidades.</p>
+        <a class="btn btn-light" href="cadastro.html">Quero participar</a>
+      </div>
+    </div>
+
+    <div class="slide slide-iptu">
+      <div class="slide-content">
+        <h2>IPTU 2026</h2>
+        <p>Informações importantes sobre o IPTU para os moradores do Sargi e Pé de Serra.</p>
+        <a class="btn btn-light" href="documentos.html">Saiba mais aqui</a>
+      </div>
+    </div>
+
+  </div>
+  <button class="car-prev" aria-label="Anterior" onclick="carMove(-1)">&#8249;</button>
+  <button class="car-next" aria-label="Próximo" onclick="carMove(1)">&#8250;</button>
+  <div class="car-dots" id="carDots"></div>
+</div>
+
+<!-- ÍCONES SOCIAIS -->
+<div class="social">
+  <a href="https://www.instagram.com/asmovisa_sg" target="_blank" rel="noopener" aria-label="Instagram">&#128247;</a>
+  <a href="mailto:asmovisasg@gmail.com" aria-label="E-mail">&#9993;</a>
+</div>
+
+<!-- EXPLORE -->
 <section>
   <div class="wrap">
     <div class="section-head">
@@ -64,7 +89,7 @@
       <a class="doc" href="portal.html"><div class="ico">🔑</div><div><h3>Portal do Proprietário</h3><p>Área exclusiva para associados.</p></div></a>
       <a class="doc" href="participe.html"><div class="ico">🤝</div><div><h3>Participe</h3><p>Associe-se e registre demandas.</p></div></a>
       <a class="doc" href="diretoria.html"><div class="ico">👥</div><div><h3>Diretoria</h3><p>Quem representa a associação.</p></div></a>
-      <a class="doc" href="canais.html"><div class="ico">✉️</div><div><h3>Canais</h3><p>E-mail e Instagram da ASMOVISA.</p></div></a>
+      <a class="doc" href="cadastro.html"><div class="ico">📝</div><div><h3>Seja associado</h3><p>Faça seu cadastro na ASMOVISA.</p></div></a>
     </div>
   </div>
 </section>
@@ -80,6 +105,29 @@
   </p>
   <p class="small">Site da comunidade · feito com a participação dos moradores</p>
 </footer>
+
+<script>
+(function(){
+  var i=0,
+      slides=document.querySelectorAll('#carousel .slide'),
+      track=document.getElementById('slides'),
+      dots=document.getElementById('carDots');
+  slides.forEach(function(_,k){
+    var b=document.createElement('button');
+    if(k===0) b.className='on';
+    b.setAttribute('aria-label','Slide '+(k+1));
+    b.addEventListener('click',function(){go(k);});
+    dots.appendChild(b);
+  });
+  function render(){
+    track.style.transform='translateX('+(-i*100)+'%)';
+    dots.querySelectorAll('button').forEach(function(b,k){b.className=(k===i?'on':'');});
+  }
+  function go(k){i=k;render();}
+  window.carMove=function(d){i=(i+d+slides.length)%slides.length;render();};
+  if(slides.length>1) setInterval(function(){window.carMove(1);},6000);
+})();
+</script>
 
 </body>
 </html>
