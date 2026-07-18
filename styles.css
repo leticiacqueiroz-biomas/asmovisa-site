@@ -273,3 +273,23 @@ nav a:hover{color:var(--verde);background:var(--verde-claro);border-radius:8px}
   .slide-content p{font-size:1rem}
   .brand-txt{max-width:175px;font-size:.72rem}
 }
+
+/* ===== cabeçalho v2: marca ASMOVISA + menu sempre à direita ===== */
+.nav-inner{align-items:center}
+.brand{align-items:center;gap:.75rem}
+.brand img{width:56px;height:56px;border-radius:12px}
+.brand-txt{display:flex;flex-direction:column;line-height:1.18;max-width:none;font-size:initial}
+.brand-name{font-size:1.4rem;font-weight:800;color:var(--verde);letter-spacing:.5px}
+.brand-sub{font-size:.82rem;font-weight:500;color:var(--texto)}
+.nav-right{display:flex;align-items:center;margin-left:auto}
+@media(max-width:640px){
+  .brand img{width:46px;height:46px}
+  .brand-name{font-size:1.12rem;line-height:1.1}
+  .brand-sub{font-size:.68rem;max-width:190px}
+  .menu-btn{padding:.5rem .9rem;font-size:.9rem}
+}
+
+/* logo no slide principal do carrossel */
+.slide-logo{width:104px;height:104px;border-radius:50%;background:#fff;padding:6px;
+  margin:0 auto 1.1rem;box-shadow:var(--sombra);display:block}
+@media(max-width:640px){.slide-logo{width:84px;height:84px}}
