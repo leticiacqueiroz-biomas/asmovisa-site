@@ -23,7 +23,7 @@
 <header class="nav">
   <div class="nav-inner">
     <a href="index.html" class="brand">
-      <img src="logo.jpg" alt="Logo ASMOVISA">
+      <img src="logo.webp" alt="Logo ASMOVISA">
       <span class="brand-txt"><b class="brand-name">ASMOVISA</b><span class="brand-sub">Associação de Moradores do Sargi e Pé de Serra · Uruçuca/BA</span></span>
     </a>
     <nav class="nav-right">
@@ -45,16 +45,16 @@
 <div class="carousel" id="carousel">
   <div class="slides" id="slides">
 
-    <div class="slide" style="background-image:url('hero.jpg')">
+    <div class="slide" style="background-image:url('hero.webp')">
       <div class="slide-content">
-        <img class="slide-logo" src="logo.jpg" alt="Logo ASMOVISA">
+        <img class="slide-logo" src="logo.webp" alt="Logo ASMOVISA">
         <h2>Associação de Moradores do Sargi e Pé de Serra</h2>
         <p>Moradores unidos para cuidar do nosso bairro.</p>
         <a class="btn btn-light" href="cadastro.html">Quero participar</a>
       </div>
     </div>
 
-    <div class="slide" style="background-image:url('iptu.jpg')">
+    <div class="slide" data-bg="iptu.webp">
       <div class="slide-content">
         <h2>IPTU 2026</h2>
         <p>Informações importantes sobre o IPTU para os moradores do Sargi e Pé de Serra.</p>
@@ -62,7 +62,7 @@
       </div>
     </div>
 
-    <div class="slide" style="background-image:url('g3.jpg')">
+    <div class="slide" data-bg="g3.webp">
       <div class="slide-content">
         <h2>Empreendedores locais</h2>
         <p>Conheça aqui os nossos empreendedores locais do Sargi e Pé de Serra.</p>
@@ -70,7 +70,7 @@
       </div>
     </div>
 
-    <div class="slide" style="background-image:url('g5.jpg')">
+    <div class="slide" data-bg="g5.webp">
       <div class="slide-content">
         <h2>Lazer</h2>
         <p>Praias e natureza para viver e curtir o nosso lugar.</p>
@@ -112,7 +112,7 @@
 </section>
 
 <footer>
-  <img src="logo.jpg" alt="Logo ASMOVISA">
+  <img loading="lazy" decoding="async" src="logo.webp" alt="Logo ASMOVISA">
   <div><b>ASMOVISA</b> — Associação de Moradores do Sargi e Pé de Serra</div>
   <p class="small">
     <a href="faq.html">Perguntas frequentes</a> ·
@@ -136,11 +136,18 @@
     b.addEventListener('click',function(){go(k);});
     dots.appendChild(b);
   });
+  function ensureBg(k){
+    var s=slides[k]; if(!s) return;
+    var b=s.getAttribute('data-bg');
+    if(b){ s.style.backgroundImage="url('"+b+"')"; s.removeAttribute('data-bg'); }
+  }
   function render(){
+    ensureBg(i); ensureBg((i+1)%slides.length);
     track.style.transform='translateX('+(-i*100)+'%)';
     dots.querySelectorAll('button').forEach(function(b,k){b.className=(k===i?'on':'');});
   }
   function go(k){i=k;render();}
+  render();
   window.carMove=function(d){i=(i+d+slides.length)%slides.length;render();};
   if(slides.length>1) setInterval(function(){window.carMove(1);},6000);
 })();
