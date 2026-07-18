@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cadastro de Associados — ASMOVISA</title>
+<meta name="description" content="Cadastre-se como associado da ASMOVISA — moradores e proprietários do Sargi e Pé de Serra.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ASMOVISA">
+<meta property="og:title" content="Cadastro de Associados — ASMOVISA">
+<meta property="og:description" content="Faça parte da ASMOVISA. Cadastro para moradores e proprietários do Sargi e Pé de Serra.">
+<meta property="og:url" content="https://asmovisa.org.br/cadastro.html">
+<meta property="og:image" content="https://asmovisa.org.br/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://asmovisa.org.br/og.jpg">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <img src="logo.jpg" alt="Logo ASMOVISA">
+      <span><b>ASMOVISA</b>Sargi e Pé de Serra</span>
+    </a>
+    <button class="menu-btn" aria-label="Abrir menu" onclick="document.getElementById('menu').classList.toggle('open')">&#9776;</button>
+    <nav>
+      <ul id="menu">
+        <li><a href="sargi.html">O Sargi</a></li>
+        <li><a href="historico.html">Histórico</a></li>
+        <li><a href="documentos.html">Documentos</a></li>
+        <li><a href="transparencia.html">Transparência</a></li>
+        <li><a href="portal.html">Portal</a></li>
+        <li><a href="participe.html">Participe</a></li>
+        <li><a href="diretoria.html">Diretoria</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Cadastro de Associados</h2>
+      <div class="line"></div>
+      <p>Bem-vindo(a) à ASMOVISA! Este cadastro marca um novo momento da nossa associação: queremos fortalecer a participação da comunidade de forma organizada, transparente e democrática.</p>
+    </div>
+
+    <div class="grid2" style="margin-bottom:2rem">
+      <div class="card">
+        <h3>Quem pode se associar?</h3>
+        <p>Moradores e proprietários de imóveis da Vila Sargi e da Vila Pé de Serra que concordem com o Estatuto da ASMOVISA.</p>
+      </div>
+      <div class="card">
+        <h3>Direitos e deveres</h3>
+        <p>Ao se associar, você poderá participar das assembleias, votar, ser votado(a), apresentar propostas e acompanhar as decisões da associação. Também assume o compromisso de respeitar o Estatuto, colaborar para o bem da comunidade e cumprir as decisões tomadas coletivamente.</p>
+      </div>
+    </div>
+
+    <div class="form-wrap">
+      <p style="color:var(--cinza);font-size:.9rem;margin-bottom:.4rem"><b>Privacidade (LGPD):</b> os dados informados serão utilizados exclusivamente para a gestão da associação, comunicação institucional e organização das assembleias. Eles não serão vendidos, compartilhados com terceiros ou utilizados para outras finalidades sem autorização legal.</p>
+      <p class="form-note" style="margin-bottom:1rem">Campos com <span class="req">*</span> são obrigatórios.</p>
+
+      <form action="https://formsubmit.co/asmovisasg@gmail.com" method="POST" enctype="multipart/form-data">
+        <!-- configurações do FormSubmit -->
+        <input type="hidden" name="_subject" value="Novo cadastro de associado — ASMOVISA">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="https://asmovisa.org.br/cadastro-obrigado.html">
+        <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off">
+
+        <label class="campo">Nome completo <span class="req">*</span></label>
+        <input type="text" name="Nome completo" required>
+
+        <label class="campo">CPF <span class="req">*</span></label>
+        <input type="text" name="CPF" inputmode="numeric" required>
+
+        <label class="campo">Data de nascimento</label>
+        <input type="date" name="Data de nascimento">
+
+        <label class="campo">Telefone / WhatsApp <span class="req">*</span></label>
+        <input type="tel" name="Telefone/WhatsApp" required>
+
+        <label class="campo">E-mail</label>
+        <input type="email" name="E-mail">
+
+        <label class="campo">Você é <span class="req">*</span></label>
+        <div class="radio-group">
+          <label><input type="radio" name="Vínculo" value="Morador(a)" required> Morador(a)</label>
+          <label><input type="radio" name="Vínculo" value="Proprietário(a) residente"> Proprietário(a) residente</label>
+          <label><input type="radio" name="Vínculo" value="Proprietário(a) não residente"> Proprietário(a) não residente</label>
+        </div>
+
+        <label class="campo">Endereço do imóvel <span class="req">*</span></label>
+        <input type="text" name="Endereço do imóvel" required>
+
+        <label class="campo">Há quanto tempo possui vínculo com a comunidade?</label>
+        <input type="text" name="Tempo de vínculo com a comunidade" placeholder="Ex.: 5 anos">
+
+        <label class="campo">Comprovante de residência ou documento que comprove a propriedade</label>
+        <input type="file" name="Comprovante" accept="image/*,application/pdf">
+        <p class="form-note">Aceita foto ou PDF. Se preferir, você pode enviar depois por e-mail.</p>
+
+        <div class="form-check">
+          <input type="checkbox" name="Declaração do Estatuto" value="Li e concordo com o Estatuto" required>
+          <span>Declaro que li e concordo com o <a href="estatuto.pdf" target="_blank" rel="noopener">Estatuto da ASMOVISA</a>. <span class="req">*</span></span>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" name="Autorização LGPD" value="Autorizo o tratamento dos dados (LGPD)" required>
+          <span>Autorizo o tratamento dos meus dados conforme a LGPD. <span class="req">*</span></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Enviar cadastro</button>
+      </form>
+    </div>
+
+    <p class="form-note" style="text-align:center;max-width:720px;margin:1.2rem auto 0">
+      Após o envio, seu cadastro será analisado pela Diretoria, conforme o Estatuto. Depois da confirmação, você poderá participar do grupo oficial de WhatsApp dos associados.
+    </p>
+  </div>
+</section>
+
+<footer>
+  <img src="logo.jpg" alt="Logo ASMOVISA">
+  <div><b>ASMOVISA</b> — Associação de Moradores do Sargi e Pé de Serra</div>
+  <p class="small">
+    <a href="faq.html">Perguntas frequentes</a> ·
+    <a href="canais.html">Canais</a> ·
+    <a href="mailto:asmovisasg@gmail.com">asmovisasg@gmail.com</a> ·
+    <a href="https://www.instagram.com/asmovisa_sg" target="_blank" rel="noopener">@asmovisa_sg</a>
+  </p>
+  <p class="small">Site da comunidade · feito com a participação dos moradores</p>
+</footer>
+
+</body>
+</html>
