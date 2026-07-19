@@ -293,3 +293,26 @@ nav a:hover{color:var(--verde);background:var(--verde-claro);border-radius:8px}
 .slide-logo{width:104px;height:104px;border-radius:50%;background:#fff;padding:6px;
   margin:0 auto 1.1rem;box-shadow:var(--sombra);display:block}
 @media(max-width:640px){.slide-logo{width:84px;height:84px}}
+
+/* ===== artigo / material informativo ===== */
+.artigo{max-width:840px;margin:0 auto}
+.artigo h3{color:var(--verde-escuro);font-size:1.2rem;margin:2rem 0 .6rem}
+.artigo h3:first-child{margin-top:0}
+.artigo p{color:var(--cinza);margin-bottom:.9rem}
+.artigo ul{margin:0 0 1rem 1.1rem;color:var(--cinza)}
+.artigo ul li{margin-bottom:.5rem}
+.artigo b{color:var(--texto)}
+.tabela-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1.1rem 0 1.3rem}
+.tabela{width:100%;border-collapse:collapse;font-size:.93rem;background:#fff;
+  border-radius:var(--raio);overflow:hidden;box-shadow:var(--sombra);min-width:520px}
+.tabela th,.tabela td{padding:.7rem .85rem;text-align:left;border-bottom:1px solid #eee;color:var(--cinza)}
+.tabela thead th{background:var(--verde-escuro);color:#fff;font-size:.85rem;font-weight:700;white-space:nowrap}
+.tabela tbody tr:nth-child(even){background:#faf7f2}
+.tabela tbody tr:last-child td{border-bottom:0}
+.tabela td:first-child{color:var(--texto);font-weight:600}
+.tabela .tot td{background:var(--verde-claro);color:var(--verde-escuro);font-weight:700}
+.aviso{background:#fff7ed;border-left:5px solid var(--terra);color:#7a4520;
+  border-radius:var(--raio);padding:1.1rem 1.3rem;margin:1.4rem 0;font-size:.93rem}
+.resultado{background:var(--verde-claro);border-radius:var(--raio);padding:.95rem 1.2rem;
+  color:var(--verde-escuro);font-weight:700;margin:.2rem 0 1.4rem;font-size:.98rem}
+.fontes{font-size:.85rem;color:var(--cinza);border-top:1px solid #e6ded2;padding-top:1rem;margin-top:2rem}
