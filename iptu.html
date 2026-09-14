@@ -17,6 +17,37 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://asmovisa.org.br/og.jpg">
 <link rel="stylesheet" href="styles.css">
+<style>
+  /* Bloco de atualização (novidades) */
+  .atualizacao{background:var(--verde-claro);border-left:5px solid var(--verde);border-radius:var(--raio);
+    padding:1.1rem 1.3rem;margin:1.4rem 0 1.8rem;color:var(--verde-escuro)}
+  .atualizacao b.tag{display:inline-block;background:var(--verde);color:#fff;border-radius:999px;
+    padding:.2rem .75rem;font-size:.78rem;letter-spacing:.4px;margin-bottom:.6rem}
+  .atualizacao ul{margin:.4rem 0 0 1.1rem}
+  .atualizacao li{margin-bottom:.4rem}
+  .artigo h4{color:var(--verde-escuro);font-size:1.05rem;margin:1.4rem 0 .4rem}
+  .foto-artigo{max-width:520px;margin:1.4rem auto 1.8rem}
+  .foto-artigo img{width:100%;border-radius:var(--raio);box-shadow:var(--sombra);display:block}
+  .foto-artigo figcaption{font-size:.9rem;color:var(--cinza);text-align:center;margin-top:.6rem;line-height:1.45}
+  .cta-gt{display:flex;flex-wrap:wrap;gap:.8rem;justify-content:center;margin:1.2rem 0 .5rem}
+  .cta-gt .btn{text-align:center}
+
+  /* Leitura confortável no celular (só nesta página) */
+  @media(max-width:640px){
+    .artigo p,.artigo ul li,.atualizacao{font-size:1.08rem;line-height:1.7}
+    .artigo h3{font-size:1.32rem;line-height:1.3}
+    .artigo h4{font-size:1.12rem}
+    .section-head h2{font-size:1.5rem}
+    .section-head p{font-size:1.04rem}
+    .aviso,.resultado{font-size:1.02rem}
+    .fontes{font-size:.95rem}
+    .tabela{font-size:1rem;min-width:560px}
+    .tabela th,.tabela td{padding:.8rem .8rem}
+    .tabela thead th{font-size:.92rem}
+    .tabela-wrap::before{content:"↔ Deslize para o lado para ver toda a tabela";display:block;
+      font-size:.85rem;color:var(--cinza);margin-bottom:.4rem}
+  }
+</style>
 </head>
 <body>
 
@@ -55,6 +86,15 @@
         Este documento tem caráter informativo e não substitui orientação jurídica individual — reúne, em linguagem simples, o que qualquer cidadão pode verificar nos atos oficiais.
       </div>
 
+      <div class="atualizacao">
+        <b class="tag">ATUALIZAÇÃO — SETEMBRO DE 2026</b>
+        <ul>
+          <li><b>Prazo prorrogado:</b> o vencimento do IPTU 2026 foi adiado para <b>30 de outubro</b>, com desconto para pagamento à vista e parcelamento em 3 vezes com 10% de desconto até essa data (Decreto nº 1.257/2026).</li>
+          <li><b>Proposta entregue:</b> em 4 de setembro, a ASMOVISA protocolou na Prefeitura uma proposta formal (Ofício 02/2026) para um reajuste gradual e previsível, construída pelo Grupo de Trabalho do IPTU.</li>
+          <li><b>Reunião com a Prefeitura:</b> em 13 de setembro, a prefeita Magnólia Barreto, o administrador de Serra Grande, Moacir Leite, e vereadores se reuniram com a comunidade no Sargi. Ficou combinado buscar convergência entre as propostas, revisar as alíquotas e construir uma nova PGV por lei, com uma nova reunião após o período eleitoral. <a href="#reuniao">Veja os detalhes na seção 9</a>.</li>
+        </ul>
+      </div>
+
       <h3>Afinal, o que é o IPTU — e por que ele importa?</h3>
       <p>O IPTU (Imposto Predial e Territorial Urbano) é cobrado pela Prefeitura sobre os imóveis da cidade e é uma das principais fontes de recursos próprios do município. É com esse dinheiro que se pagam serviços e melhorias que chegam ao nosso dia a dia: pavimentação, iluminação, drenagem, limpeza, praças e manutenção do bairro. Por isso, pagar o IPTU é importante — e é justamente o que nos dá legitimidade para cobrar do poder público que esses recursos voltem em benfeitorias para o Sargi e o Pé de Serra.</p>
       <p>Segundo a Prefeitura, hoje apenas cerca de 20% a 30% dos contribuintes do Sargi pagam o imposto; quando poucos pagam, o município arrecada menos, todos perdem em serviços e a comunidade fica mais fraca para exigir melhorias.</p>
@@ -73,7 +113,7 @@
       <p>A Lei 546/2014 não deixava os aumentos ao critério do momento. Ela trazia proteções para o contribuinte:</p>
       <ul>
         <li>Os valores do metro quadrado eram fixados por lei, nos anexos da própria Lei 546/2014.</li>
-        <li>O reajuste do IPTU pela nova base ficou limitado a 20% em 2015 e, nos anos seguintes, a até 20% ao ano — e somente com autorização da Dâmara Municipal (art. 3º).</li>
+        <li>O reajuste do IPTU pela nova base ficou limitado a 20% em 2015 e, nos anos seguintes, a até 20% ao ano — e somente com autorização da Câmara Municipal (art. 3º).</li>
         <li>Os fatores de correção não podiam aumentar ou reduzir o valor venal em mais de 25% (art. 140, §2º).</li>
       </ul>
       <p>Ou seja: aumentos previsíveis, graduais e aprovados pelos vereadores.</p>
@@ -170,22 +210,78 @@
       <p>Tem sido comum guias virem com a metragem do terreno ou da construção, ou ainda a localização, erradas. Isso é diferente do aumento da PGV: é um erro de cadastro no seu imóvel específico, e não uma questão da política de valores.</p>
       <p>Nesses casos, o caminho é ir à Prefeitura corrigir. Corrigir o cadastro faz parte do processo. Confira na guia se a área do terreno, a área construída e a localização (bairro/zona) estão certas; se houver erro, leve os documentos do imóvel ao setor de tributos e peça a correção.</p>
 
-      <h3>9. O que você pode fazer</h3>
-      <p>Cinco atitudes simples — e que fazem diferença:</p>
+      <h3 id="reuniao">9. O que aconteceu desde então: a proposta da ASMOVISA e a reunião com a Prefeitura</h3>
+      <p>Em agosto de 2026, moradores e a ASMOVISA formaram um <b>Grupo de Trabalho do IPTU (GT IPTU)</b> para construir uma proposta coletiva. Em <b>4 de setembro</b>, a associação protocolou na Prefeitura uma proposta formal (Ofício nº 02/2026), recebida pelo administrador de Serra Grande. Em <b>13 de setembro</b>, a prefeita Magnólia Barreto, o administrador Moacir Leite e vereadores se reuniram com a comunidade no Sargi. Veja o que foi apresentado e combinado.</p>
+
+      <figure class="foto-artigo">
+        <img loading="lazy" decoding="async" src="iptu-entrega-proposta.webp" alt="Eduardo Caetano, presidente da ASMOVISA, entrega a proposta do IPTU ao administrador de Serra Grande, Moacir Leite">
+        <figcaption>4 de setembro de 2026: Eduardo Caetano, presidente da ASMOVISA, entrega a proposta ao administrador de Serra Grande, Moacir Leite, que assinou o recebimento.</figcaption>
+      </figure>
+
+      <h4>O que a ASMOVISA apresentou</h4>
       <ul>
-        <li>Confira a sua guia e compare os valores do m² com os do decreto.</li>
-        <li>Verifique metragem e localização — se houver erro, vá à Prefeitura corrigir.</li>
-        <li>Guarde as guias de anos anteriores para comparar a evolução da cobrança.</li>
-        <li>Procure o setor de tributos para esclarecer os valores e o desconto aplicado ao seu imóvel — e busque orientação jurídica se quiser contestar.</li>
-        <li>Participe da ASMOVISA — quanto mais moradores informados e organizados, mais força para dialogar com o poder público.</li>
+        <li><b>O problema:</b> aumentos abruptos, acúmulo de dívidas e risco à permanência de moradores antigos no bairro. A carta reconhece os avanços já obtidos no diálogo (prazo e descontos do Decreto nº 1.257/2026), mas aponta que o que preocupa é a forma do reajuste: repentino, de proporção muito elevada e sem estudo técnico que o justifique.</li>
+        <li><b>A proposta:</b> partir do valor de referência de <b>2024</b> — o último antes da sequência de aumentos — e aplicar, a cada ano, o acréscimo de até 20% previsto no art. 3º da Lei 546/2014 (uma vez de 2024 para 2025 e outra de 2025 para 2026), mais a correção pelo IPCA. Para o lote de referência deste material (376 m² de terreno e 169 m² de construção), o IPTU de 2026 ficaria em <b>R$ 1.090,56</b>, contra R$ 2.595,07 cobrados com o desconto do decreto. Para os anos seguintes, o mesmo critério: correção monetária mais até 20% ao ano, para que cada morador saiba com antecedência o que esperar.</li>
+        <li><b>O pedido:</b> que uma nova Planta Genérica de Valores seja aprovada <b>por lei</b>, precedida de estudo técnico, audiência pública e consulta à população — e não por decreto. Até lá, valores uniformes para todo o Distrito, como na Lei 546/2014.</li>
+      </ul>
+      <p><a class="btn btn-primary" href="oficio-02-2026-proposta-iptu-asmovisa.pdf" target="_blank" rel="noopener">Ler a carta completa (PDF)</a></p>
+
+      <h4>O que a Prefeitura respondeu (segundo o administrador Moacir Leite)</h4>
+      <ul>
+        <li>A Lei de 2014 fixava R$ 120/m² de terreno no Sargi, mas esse valor não teria sido aplicado pelas gestões anteriores.</li>
+        <li>Para 2025, os valores teriam sido atualizados pelo IPCA: de R$ 120 para R$ 228,11/m² (terreno) e de R$ 144 para R$ 273,73/m² (construção).</li>
+        <li>Para 2026, foram lançados R$ 240/m² (terreno) e R$ 1.000/m² (construção). O administrador assumiu a responsabilidade e reconheceu que o erro foi o <b>salto excessivo em dois anos</b>, e não os valores em si.</li>
+        <li><b>Contraproposta da Prefeitura:</b> atualizar os valores de 2014 pelo IPCA, o que resultaria em cerca de <b>R$ 1.320</b> para o mesmo lote de referência — R$ 230 acima da referência da ASMOVISA. O administrador sugeriu buscar a convergência entre as duas propostas.</li>
+        <li><b>Alíquotas informadas como vigentes:</b> 2% para terreno sem construção e 1% para terreno com construção. O administrador reconheceu que a revisão das alíquotas é um ponto legítimo de discussão.</li>
+        <li>A prefeita afirmou disposição para ouvir a comunidade e buscar um denominador comum.</li>
       </ul>
 
-      <div style="text-align:center;margin:2rem 0 .5rem">
-        <a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSeeQvVzlQxw9RQCwI5-Ba6WiKSrRIGm4Vwr30cnnRdYanwshw/viewform" target="_blank" rel="noopener">Quero participar da ASMOVISA</a>
+      <h4>O que a comunidade pediu</h4>
+      <ul>
+        <li>Uma comissão participativa, estudo de mercado e votação dos valores.</li>
+        <li>Aumentos graduais e alíquotas entre 0,5% e 1%, com revisão da alíquota de 2% para terrenos.</li>
+        <li>Previsibilidade, comunicação prévia e participação da comunidade antes de decisões de impacto.</li>
+        <li>Uma solução que contemple também quem não tem condições de pagar.</li>
+      </ul>
+
+      <h4>Compromissos e encaminhamentos</h4>
+      <ul>
+        <li>Buscar a convergência entre a referência da ASMOVISA (cerca de R$ 1.090) e a da Prefeitura (cerca de R$ 1.320).</li>
+        <li>Incluir a revisão das alíquotas na discussão para o próximo exercício.</li>
+        <li>Construir uma nova PGV aprovada por lei, com debate público e participação da Câmara.</li>
+        <li>Realizar uma nova reunião entre ASMOVISA, Prefeitura e Câmara após o período eleitoral (previsão de cerca de 20 dias).</li>
+        <li>Os vereadores Jardel e Adé se comprometeram a participar das reuniões da ASMOVISA e a acompanhar a pauta na Câmara.</li>
+      </ul>
+      <div class="aviso">
+        <b>Importante:</b> até o momento não há prazo definido nem decisão final sobre a nova lei, o valor venal, a alíquota ou o índice de atualização. O que existe são compromissos de diálogo e uma nova reunião a ser marcada. A ASMOVISA seguirá acompanhando e informando a comunidade.
       </div>
 
-      <p class="fontes"><b>Fontes:</b> Lei Municipal 546/2014; Lei Municipal 712/2025; Decreto Municipal 1203/2025; guia de IPTU 2026 (Uruçuca/BA).<br>
-      ASMOVISA — Material informativo · Uruçuca/BA</p>
+      <h3>10. O que a Justiça já decidiu</h3>
+      <p>Alguns moradores entraram individualmente com mandados de segurança contra a cobrança. Em pelo menos um caso, o Tribunal de Justiça da Bahia (TJBA), em decisão de <b>agravo de instrumento</b>, deu razão ao morador, com base no princípio constitucional da <b>vedação ao confisco</b>, citando precedente no próprio município que limita o reajuste do IPTU à correção monetária.</p>
+      <ul>
+        <li><b>Atenção:</b> trata-se de uma decisão <b>provisória</b>, tomada no curso do processo — não é a sentença final. E vale apenas para quem entrou na Justiça.</li>
+        <li>A ASMOVISA <b>não</b> pretende entrar com ações judiciais coletivas. A decisão de contestar a cobrança na Justiça é individual, de cada morador, e deve ser tomada com orientação jurídica.</li>
+      </ul>
+
+      <h3>11. O que você pode fazer</h3>
+      <p>Atitudes simples — e que fazem diferença:</p>
+      <ul>
+        <li><b>Fique atento ao prazo:</b> o IPTU 2026 vence em 30 de outubro, com desconto à vista e parcelamento em 3x com 10% de desconto até essa data.</li>
+        <li>Confira a sua guia e compare os valores do m² com os do decreto.</li>
+        <li>Verifique metragem e localização — se houver erro, vá à Prefeitura corrigir.</li>
+        <li>Guarde as guias de anos anteriores (2023, 2024 e 2025) para comparar a evolução da cobrança — elas também ajudam o GT a embasar a proposta da comunidade.</li>
+        <li>Procure o setor de tributos para esclarecer os valores e o desconto aplicado ao seu imóvel — e busque orientação jurídica se quiser contestar.</li>
+        <li>Participe da ASMOVISA e do GT IPTU — quanto mais moradores informados e organizados, mais força para dialogar com o poder público.</li>
+      </ul>
+
+      <p style="text-align:center;margin-top:2rem"><b>Quer fortalecer esse trabalho?</b> Entre no Grupo de Trabalho do IPTU e cadastre-se como associado(a).</p>
+      <div class="cta-gt">
+        <a class="btn btn-primary" href="https://chat.whatsapp.com/INkpDlrpBv9ECb5U6mgWvp" target="_blank" rel="noopener">Entrar no GT IPTU (WhatsApp)</a>
+        <a class="btn btn-light" style="background:var(--verde-claro);color:var(--verde-escuro)" href="https://asmovisa.org.br/cadastro.html" target="_blank" rel="noopener">Cadastre-se como associado(a)</a>
+      </div>
+
+      <p class="fontes"><b>Fontes:</b> Lei Municipal 546/2014; Lei Municipal 712/2025; Decreto Municipal 1203/2025; guias de IPTU 2024–2026 (Uruçuca/BA); Ofício ASMOVISA 02/2026 (proposta entregue à Prefeitura em 4/9/2026); reunião pública com a Prefeitura no Sargi em 13/9/2026; decisão do TJBA em agravo de instrumento.<br>
+      ASMOVISA — Material informativo · Uruçuca/BA · Atualizado em setembro de 2026</p>
     </div>
   </div>
 </section>
